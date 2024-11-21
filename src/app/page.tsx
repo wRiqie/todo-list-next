@@ -52,7 +52,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="space-x-4">
-                <a href="/signin">
+                <a href="/auth/signin">
                   <Button>Get Started</Button>
                 </a>
                 <Button variant="outline">Learn More</Button>

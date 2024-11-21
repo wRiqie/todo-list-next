@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import { useState } from "react";
 
-export default function LoginPage() {
+export default function Page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,9 +18,8 @@ export default function LoginPage() {
       setError("Please fill in all fields");
       return;
     }
-    // Here you would typically handle the login logic
-    console.log("Login attempted with:", { email, password });
-    setError("");
+    
+    return redirect('/app')
   };
 
   return (
@@ -57,7 +57,7 @@ export default function LoginPage() {
         <p className="text-sm text-center text-gray-600">
           Don{"'"}t have an account?{" "}
           <Link
-            href="/signup"
+            href="/auth/signup"
             className="font-semibold text-primary hover:underline"
           >
             Sign up

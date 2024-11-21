@@ -17,7 +17,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function SignupPage() {
+export default function Page() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -112,7 +112,7 @@ export default function SignupPage() {
           <p className="text-sm text-center w-full text-gray-600 dark:text-gray-400">
             Already have an account?{" "}
             <Link
-              href="/signin"
+              href="/auth/signin"
               className="font-semibold text-primary hover:underline"
             >
               Log in
